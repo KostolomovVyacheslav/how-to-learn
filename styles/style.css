@@ -14,7 +14,6 @@
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
-
 .background-gray {
   background-color: #f2f2f2;
 }
@@ -29,22 +28,15 @@
   justify-content: center;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .logo {
   width: 183px;
-  height: 32px;
 }
 
 .logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
+  height: 32px;
   z-index: 2;
 }
 
@@ -52,9 +44,6 @@
   width: 730px;
   margin-left: 64px;
   z-index: 2;
-}
-
-.header__title h1 {
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
@@ -65,31 +54,26 @@
   bottom: 30px;
   left: 64px;
   width: 388px;
+  z-index: 2;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
 }
 
 .header__link {
+  text-decoration: none;
   color: #2f80ed;
 }
 
-.link-underline_none {
-  text-decoration: none;
-}
-
 .header__main-illustration {
+  background-image: url(../images/header-image.png);
+  background-size: 765px 608px;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 765px;
   height: 608px;
   z-index: 1;
-}
-
-.main-illustration-size {
-  width: 765px;
-  height: 608px;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -102,12 +86,12 @@
   background-color: #2f80ed;
 }
 
-
 .description {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: #ffffff;
+  color: #000000;
 }
 
 .two-columns {
@@ -120,9 +104,6 @@
 
 .two-columns__brief {
   width: 175px;
-}
-
-.two-columns__brief h2 {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -137,34 +118,35 @@
   font-weight: normal;
 }
 
+.two-columns__paragraph {
+  margin-bottom: 30px;
+}
+
+.two-columns__paragraph:last-child {
+  margin-bottom: 0;
+}
+
 .two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: bold;
 }
 
-.paragraph_space {
-  margin-bottom: 30px;
-}
-
-
 .digits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
   background-color: #ffffff;
 }
 
 .section-title {
   width: 60%;
   text-align: center;
-}
-
-.section-title h2 {
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
-}
-
-.section-title_theme_light {
-  color: black;
   margin: 100px 0 20px 0;
 }
 
@@ -176,53 +158,40 @@
   font-weight: normal;
 }
 
-.section-subtitle_theme_light {
-  color: black;
-}
-
 .table {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1100px;
-}
-
-.table_theme_light {
-  color: black;
   margin: 0 auto 100px auto;
 }
 
-.table__cell_theme_light {
+.table__cell {
   width: 250px;
-  color: black;
   margin-top: 60px;
 }
 
 .table__heading {
-  color: black;
-  margin-bottom: 20px;
-}
-
-.table__heading h3 {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-}
-
-.text-margin-bottom {
-  color: black;
   margin-bottom: 20px;
 }
 
+.table__text:last-child {
+  margin-bottom: 0;
+}
 
 .feynman {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,16 +203,9 @@
   height: 890px;
 }
 
-.pos-relative {
-  position: relative;
-}
-
 .feynman__title {
   width: 648px;
   margin: 100px 0 70px 0;
-}
-
-.feynman__title h2 {
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
@@ -262,14 +224,19 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  text-decoration: none;
   color: #2f80ed;
 }
 
-
 .kaufman {
-  color: white;
-  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   overflow: hidden;
+  background-color: #1f1f1f;
+  color: white;
 }
 
 .kaufman__triangle {
@@ -317,7 +284,6 @@
   color: white;
 }
 
-
 .footer {
   min-height: 350px;
   display: flex;
@@ -346,6 +312,10 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+}
+
+.logo_place_footer {
+  height: 35px;
 }
 
 .footer__author {
@@ -378,5 +348,10 @@
   font-size: 18px;
   font-weight: normal;
   list-style: none;
+}
+
+.footer__column-link {
   margin-bottom: 16px;
+  text-decoration: none;
+  color: #2f80ed;
 }
